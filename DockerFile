@@ -4,6 +4,8 @@
 ## Оглавление
 ##  
 ##  1. Базовый образ и разработчики
+##  2. Установить локаль ru_RU.UTF-8
+##  3. Запустить bash
 ##
 
 # 1. Базовый образ и разработчики
@@ -11,8 +13,7 @@ FROM ubuntu:16.04
 MAINTAINER German Manvelov <4gekkman@gmail.com>
 
 # 2. Установить локаль ru_RU.UTF-8
-RUN locale-gen ru_RU.UTF-8
-ENV LANG ru_RU.UTF-8  
-ENV LANGUAGE ru_RU:ru  
-ENV LC_ALL ru_RU.UTF-8  
+ENV LANG C.UTF-8
 
+# 3. Запустить bash
+CMD ["/bin/bash"]
